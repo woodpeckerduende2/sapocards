@@ -1,0 +1,386 @@
+/* Tema escuro: grafite e sálvia. Tema claro preservado. */
+#modal {
+  margin: auto;
+}
+:root {
+  color-scheme: light;
+}
+
+.drag-handle {
+  cursor: grab;
+  touch-action: none;
+  user-select: none;
+}
+.drag-handle:active {
+  cursor: grabbing;
+}
+
+.deck.dragging {
+  opacity: 0.45;
+}
+.deck.drag-over {
+  outline: 3px solid #8fad6a;
+  outline-offset: 3px;
+}
+.theme-toggle {
+  border: 1px solid #e2e7dc;
+  border-radius: 50%;
+  padding: 8px;
+  color: #496643;
+}
+
+html[data-theme="dark"] {
+  color-scheme: dark;
+  color: #f1f3ef;
+  background: #151719;
+  --color-forest: #aac59a;
+  --color-sage: #252a2d;
+  --color-ink: #f1f3ef;
+  --color-muted: #adb6b0;
+  --dark-surface: #1d2023;
+  --dark-raised: #252a2d;
+  --dark-border: #343a3c;
+  --dark-muted: #adb6b0;
+}
+html[data-theme="dark"] body {
+  background: #151719;
+  color: #f1f3ef;
+}
+html[data-theme="dark"]
+  :is(
+    .sidebar,
+    .topbar,
+    .deck,
+    .stat,
+    .panel,
+    .study-card,
+    .review-btn,
+    .lesson-tile,
+    .lesson-option,
+    #modal
+  ) {
+  background: var(--dark-surface);
+  border-color: var(--dark-border);
+  color: #f1f3ef;
+}
+html[data-theme="dark"] :is(.sidebar, .topbar) {
+  background: #1d2023;
+  border-color: #343a3c;
+}
+html[data-theme="dark"] :is(.brand, .section-title, .deck-title, .study-text) {
+  color: #f1f3ef;
+}
+html[data-theme="dark"]
+  :is(
+    .eyebrow,
+    .subtle,
+    .navitem,
+    .searchbox,
+    .deck-desc,
+    .deck-footer,
+    .footer,
+    .tab,
+    .stat small,
+    .review-btn small,
+    .reorder-position
+  ) {
+  color: var(--dark-muted);
+}
+html[data-theme="dark"] .navitem:hover {
+  background: #252a2d;
+}
+html[data-theme="dark"] .navitem.active {
+  background: #2c3930;
+  color: #d5e3ce;
+}
+html[data-theme="dark"] .navbadge {
+  background: #3c4f3e;
+  color: #e0ebd9;
+}
+html[data-theme="dark"] .hero {
+  background: #222c28;
+  border-color: #3b4740;
+}
+html[data-theme="dark"] .hero p {
+  color: #adb6b0;
+}
+html[data-theme="dark"] :is(.art-orbit, .art-orbit:after) {
+  border-color: #445349;
+}
+html[data-theme="dark"] :is(.hero .eyebrow, [style*="color:#6c8060"]) {
+  color: #aac59a !important;
+}
+html[data-theme="dark"] .btn-primary {
+  background: #aac59a;
+  color: #172219;
+  border-color: transparent;
+}
+html[data-theme="dark"] .btn-primary:hover {
+  background: #bed5b0;
+}
+html[data-theme="dark"] .btn-light {
+  background: #252a2d;
+  border-color: #41494a;
+  color: #f1f3ef;
+}
+html[data-theme="dark"] .btn-light:hover {
+  background: #30373a;
+}
+html[data-theme="dark"] .btn-amber {
+  background: #d7b65f;
+  color: #24241d;
+}
+html[data-theme="dark"] :is(.theme-toggle, .key, .help-key) {
+  border-color: #41494a;
+  color: #bdcdb5;
+}
+html[data-theme="dark"] :is(.iconbtn:hover, .stat-icon) {
+  background: #2b3830;
+}
+html[data-theme="dark"] .green {
+  background: #303f33;
+  color: #c5d8b8;
+}
+html[data-theme="dark"] .yellow {
+  background: #413b2a;
+  color: #decda0;
+}
+html[data-theme="dark"] .purple {
+  background: #38313f;
+  color: #d2c4de;
+}
+html[data-theme="dark"] .blue {
+  background: #2c3b42;
+  color: #b8cfd7;
+}
+html[data-theme="dark"] .tag {
+  background: #ffffff13;
+  color: inherit;
+}
+html[data-theme="dark"] :is(.deck-footer, .tabs, .cardrow) {
+  border-color: #343a3c;
+}
+html[data-theme="dark"] .tab.active {
+  color: #b8cfa9;
+  border-color: #aac59a;
+}
+html[data-theme="dark"] .deck-add {
+  background: #1d2023;
+  border-color: #515e50;
+  color: #cfdbc7;
+}
+html[data-theme="dark"] .deck-add:hover {
+  background: #252a2d;
+}
+html[data-theme="dark"] .deck-top .iconbtn {
+  color: inherit;
+}
+html[data-theme="dark"] .deck-top [aria-pressed="true"] {
+  color: #efd478;
+}
+html[data-theme="dark"] .pill {
+  background: #2c3930;
+  color: #c5d8b8;
+}
+html[data-theme="dark"] .progress {
+  background: #303638;
+}
+html[data-theme="dark"] .progress > div {
+  background: #aac59a;
+}
+html[data-theme="dark"] .flash-answer {
+  color: #b8cfa9;
+}
+html[data-theme="dark"] .review-btn:hover {
+  background: #2b3530;
+  border-color: #aac59a;
+}
+html[data-theme="dark"] .rating-again {
+  color: #e2ad90;
+}
+html[data-theme="dark"] .rating-good {
+  color: #b8cfa9;
+}
+html[data-theme="dark"] :is(input, textarea, select) {
+  background: #171a1c;
+  border-color: #41494a;
+  color: #f1f3ef;
+}
+html[data-theme="dark"] :is(input, textarea, select)::placeholder {
+  color: #97a19b;
+  opacity: 1;
+}
+html[data-theme="dark"] :is(input, textarea, select):focus {
+  border-color: #aac59a;
+  box-shadow: 0 0 0 3px #aac59a26;
+}
+html[data-theme="dark"] .searchbox input {
+  background: transparent;
+  box-shadow: none;
+}
+html[data-theme="dark"] #modal::backdrop {
+  background: #080a0cb8;
+}
+html[data-theme="dark"] #toast {
+  background: #aac59a;
+  color: #172219;
+  box-shadow: 0 8px 28px #0005;
+}
+html[data-theme="dark"] .warning {
+  background: #3c3323;
+  color: #e0c992;
+}
+html[data-theme="dark"] .mobile-nav {
+  background: #1d2023f5;
+  border-color: #343a3c;
+}
+html[data-theme="dark"] .mobile-nav a {
+  color: #adb6b0;
+}
+html[data-theme="dark"] .mobile-nav a.active {
+  color: #bed5b0;
+}
+html[data-theme="dark"] .level-tile.selected {
+  border-color: #aac59a;
+  box-shadow: 0 0 0 1px #aac59a;
+}
+html[data-theme="dark"] .lesson-welcome {
+  background: #222c28;
+}
+html[data-theme="dark"] :is(.lesson-welcome-glyph, .lesson-glyphs) {
+  color: #c5d8b8;
+}
+html[data-theme="dark"] .lesson-welcome-glyph span {
+  color: #adb6b0;
+}
+html[data-theme="dark"] .lesson-status {
+  background: #2c3930;
+  color: #c5d8b8;
+}
+html[data-theme="dark"] .lesson-tile.is-complete {
+  background: #252f28;
+  border-color: #687f5e;
+}
+html[data-theme="dark"] .lesson-option {
+  box-shadow: 0 3px 0 #111517;
+}
+html[data-theme="dark"] .lesson-option:hover:not(:disabled) {
+  background: #2b3530;
+  border-color: #aac59a;
+}
+html[data-theme="dark"] .lesson-option.correct {
+  background: #2d3c30;
+  color: #d5e3ce;
+  border-color: #aac59a;
+  box-shadow: 0 3px 0 #4c6347;
+}
+html[data-theme="dark"] .lesson-option.incorrect {
+  background: #3d3029;
+  color: #efc9ad;
+  border-color: #bd9477;
+  box-shadow: 0 3px 0 #624837;
+}
+html[data-theme="dark"] .lesson-feedback.positive {
+  background: #2b3930;
+  color: #d5e3ce;
+}
+html[data-theme="dark"] .lesson-feedback.gentle {
+  background: #3c3327;
+  color: #e8cba6;
+}
+html[data-theme="dark"] .java-welcome {
+  background: #252d30;
+}
+html[data-theme="dark"] .java-hero-code {
+  background: #191f22;
+  color: #c6d7d1;
+}
+html[data-theme="dark"] .java-code {
+  background: #171c1b;
+  border-color: #394641;
+  color: #cddfd3;
+}
+html[data-theme="dark"] :is(.java-topic-tags span, .java-term) {
+  background: #303c3b;
+  color: #bdd2cf;
+}
+html[data-theme="dark"] .activity-bar {
+  background: #92ac83;
+}
+
+html[data-theme="dark"] .deck.drag-over {
+  outline-color: #aac59a;
+}
+html[data-theme="dark"] [class*="border-[#edf0e7]"] {
+  border-color: #343a3c;
+}
+html[data-theme="dark"]
+  :is([style*="background:#eef3e9"], [class*="bg-[#e7eddc]"]) {
+  background: #252a2d !important;
+}
+html[data-theme="dark"]
+  :is([style*="background:#faf3df"], [class*="bg-[#f2e9c9]"]) {
+  background: #3d3627 !important;
+  color: #e0c992 !important;
+}
+html[data-theme="dark"] button:focus-visible,
+html[data-theme="dark"] a:focus-visible {
+  outline-color: #aac59a;
+}
+@media (max-width: 760px) {
+  .topbar {
+    gap: 12px;
+  }
+  .topbar > div:last-child {
+    gap: 8px;
+  }
+  .topbar .searchbox {
+    min-width: 0;
+  }
+  .topbar .searchbox input {
+    min-width: 0;
+    font-size: 13px;
+  }
+}
+
+/* A organização está sempre disponível, sem barra ou modo de edição. */
+.deck {
+  cursor: grab;
+}
+.deck .deck-handle {
+  position: absolute;
+  right: 46px;
+  top: 8px;
+  z-index: 2;
+  opacity: 0.3;
+  border: 0;
+  transition:
+    opacity 0.15s,
+    background 0.15s;
+}
+.deck:hover .deck-handle,
+.deck:focus-within .deck-handle {
+  opacity: 0.8;
+}
+.deck .deck-handle:focus-visible {
+  opacity: 1;
+}
+.deck.dragging {
+  transform: none;
+  transition: none;
+  cursor: grabbing;
+}
+@media (hover: none) {
+  .deck .deck-handle {
+    opacity: 0.65;
+  }
+}
+
+/* Regras de agendamento com marcadores e espaçamento explícitos. */
+.schedule-rules {
+  list-style: disc;
+  padding-left: 1.25rem;
+}
+.schedule-rules li + li {
+  margin-top: 0.35rem;
+}

@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="theme-color" content="#244d3f" />
+    <meta
+      name="description"
+      content="Organize seus baralhos e dê um pequeno salto nos estudos todos os dias."
+    />
+    <title>Sapocards — seu próximo salto</title>
+    <link rel="icon" href="frog.svg" type="image/svg+xml" />
+    <script>
+      try {
+        const preference = JSON.parse(
+          localStorage.getItem("sapocards.v1") || "{}",
+        ).settings?.theme;
+        document.documentElement.dataset.theme =
+          preference === "dark" ||
+          (preference === "system" &&
+            matchMedia("(prefers-color-scheme: dark)").matches)
+            ? "dark"
+            : "light";
+      } catch {
+        document.documentElement.dataset.theme = "light";
+      }
+    </script>
+    <link rel="stylesheet" href="tailwind.css" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme.css" />
+  </head>
+  <body>
+    <div id="app"></div>
+    <div id="toast" role="status" aria-live="polite"></div>
+    <dialog id="modal"></dialog>
+    <script type="module" src="app.js"></script>
+  </body>
+</html>
